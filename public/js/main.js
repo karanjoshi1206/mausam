@@ -23,7 +23,7 @@ getinfo = async (event) => {
             const arrdata = [data]
             // console.log(arrdata)
             const acttempp = (arrdata[0].main.temp);
-const acttemp = acttempp-273.15;
+const acttemp = Math.floor(acttempp-273.15);
             tempfinal.innerText = acttemp;
             const temp_mood = arrdata[0].weather[0].main;
             if (temp_mood == "Clear") {
