@@ -22,7 +22,8 @@ getinfo = async (event) => {
             const data = await response.json()
             const arrdata = [data]
             // console.log(arrdata)
-            const acttemp = (arrdata[0].main.temp)-273;
+            const acttempp = (arrdata[0].main.temp);
+const acttemp = acttempp-273.15;
             tempfinal.innerText = acttemp;
             const temp_mood = arrdata[0].weather[0].main;
             if (temp_mood == "Clear") {
